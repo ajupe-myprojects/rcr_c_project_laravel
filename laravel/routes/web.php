@@ -11,6 +11,8 @@
 |
 */
 
-Route::view('/', 'start');
+Route::get('/', 'HomeController@home')->name('home');
 
-Route::view('/list', 'list');
+Route::get('/list', 'HomeController@liste')->name('list');
+
+Route::get('/post/{post_id}', 'HomeController@posts')->name('post');
