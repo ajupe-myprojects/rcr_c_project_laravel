@@ -16,12 +16,5 @@ class HomeController extends Controller
         return view('list');
     }
 
-    public function posts($id)
-    {
-        $pages = [
-            1 => ['title' => 'Hello from Page 1'],
-            2 => ['title' => 'Hello from page 2']
-        ];
-        return view('post', ['data' => $pages[$id]]);
-    }
+
 }

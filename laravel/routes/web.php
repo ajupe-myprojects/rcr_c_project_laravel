@@ -15,4 +15,4 @@ Route::get('/', 'HomeController@home')->name('home');
 
 Route::get('/list', 'HomeController@liste')->name('list');
 
-Route::get('/post/{post_id}', 'HomeController@posts')->name('post');
+Route::resource('/books', 'BooksController')->only('index', 'show');

@@ -10,8 +10,8 @@
     <ul>
         <li> <a href="{{route('home')}}">Home</a></li>
         <li> <a href="{{route('list')}}">Liste</a></li>
-        <li><a href="{{route('post', ['post_id' => 1])}}">Post1</a></li>
-        <li><a href="{{route('post', ['post_id' => 2])}}">Post2</a></li>
+        <li> <a href="{{route('books.index')}}">Books</a></li>
+
 
     </ul>
     @yield('content')
