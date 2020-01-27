@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Books;
+use App\Http\Requests\StoreBooks;
 
 class BooksController extends Controller
 {
@@ -24,7 +25,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return view('books.create');
     }
 
     /**
@@ -33,9 +34,16 @@ class BooksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBooks $request)
     {
-        //
+        $validatedData = $request->validated();
+        $validatedData['user_uid'] = 2;
+
+        $book = Books::create($validatedData);
+
+        $request->session()->flash('status', 'Book was created');
+
+        return redirect()->route('books.show', ['book' => $book->id]);
     }
 
     /**
@@ -59,7 +67,9 @@ class BooksController extends Controller
      */
     public function edit($id)
     {
-        //
+        $book = Books::findOrFail($id);
+
+        return view('books.edit', ['book' => $book]);
     }
 
     /**
@@ -69,9 +79,16 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreBooks $request, $id)
     {
-        //
+        $book = Books::findOrFail($id);
+        $validatedData = $request->validated();
+        $validatedData['user_uid'] = 2;
+
+        $book->fill($validatedData);
+        $book->save();
+        $request->session()->flash('status', 'Book was updated');
+        return redirect()->route('books.show', ['book' => $book->id]);
     }
 
     /**
