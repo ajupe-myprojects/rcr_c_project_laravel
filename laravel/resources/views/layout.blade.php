@@ -7,17 +7,19 @@
     <title>Laravel Test</title>
 </head>
 <body>
-    <ul>
-        <li> <a href="{{route('home')}}">Home</a></li>
-        <li> <a href="{{route('list')}}">Liste</a></li>
-        <li> <a href="{{route('books.index')}}">Book List</a></li>
-        <li> <a href="{{route('books.create')}}">Add Book</a></li>
-    </ul>
-    @if(session()->has('status'))
-        <p class="message">
-            {{session()->get('status')}}
-        </p>
-    @endif
-    @yield('content')
+    <div class="wrapper">
+        <ul>
+            <li> <a href="{{route('home')}}">Home</a></li>
+            <li> <a href="{{route('list')}}">Liste</a></li>
+            <li> <a href="{{route('books.index')}}">Book List</a></li>
+            <li> <a href="{{route('books.create')}}">Add Book</a></li>
+        </ul>
+        @if(session()->has('status'))
+            <p class="message">
+                {{session()->get('status')}}
+            </p>
+        @endif
+        @yield('content')
+    </div>
 </body>
 </html>

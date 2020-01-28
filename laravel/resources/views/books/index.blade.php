@@ -7,6 +7,13 @@
             {{$book->author}} <br>
         </p>
         <a href="{{route('books.edit', ['book' => $book->id])}}">Edit</a>
+        <form action=" {{route('books.destroy', ['book' => $book->id])}} " method="POST">
+            @csrf
+            @method('DELETE')
+            <div class="formfield">
+                <input type="submit" value="Delete Book">
+            </div>
+        </form>
     @empty
         <p>No Books yet</p>
 

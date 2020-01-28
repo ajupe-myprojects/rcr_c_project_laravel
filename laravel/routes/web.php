@@ -15,4 +15,4 @@ Route::get('/', 'HomeController@home')->name('home');
 
 Route::get('/list', 'HomeController@liste')->name('list');
 
-Route::resource('/books', 'BooksController')->except('destroy');
+Route::resource('/books', 'BooksController');

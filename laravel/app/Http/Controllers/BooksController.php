@@ -97,8 +97,11 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $book = Books::findOrFail($id);
+        $book->delete();
+        $request->session()->flash('status', 'Book was deleted');
+        return redirect()->route('books.index');
     }
 }
