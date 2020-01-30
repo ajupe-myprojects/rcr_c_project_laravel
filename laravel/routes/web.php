@@ -13,6 +13,6 @@
 
 Route::get('/', 'HomeController@home')->name('home');
 
-Route::get('/list', 'HomeController@liste')->name('list');
+Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::resource('/books', 'BooksController');

@@ -2,7 +2,7 @@
 
 @section('content')
 <main class="content-main">
-    <h1>Start page</h1>
+    <h2>contact page</h2>
 </main>
 
 @endsection

@@ -1,0 +1,236 @@
+/* ### Boilerplate ### */
+/* Start Reset */
+*,*:after,*:before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+
+/* Basic HTML */
+html{
+    font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #eef0f2;
+    background-color: #191919;
+}
+
+/* basic structure */
+article a{
+    color: #f15025;
+    text-decoration-style: none;
+}
+.wrapper{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+li>a{
+    display: block;
+    text-decoration: none;
+}
+
+.hide{
+    display:none;
+}
+
+.clearfix{
+    clear:both;
+}
+.ital-red{
+    font-style: italic;
+    color:rgb(253, 59, 59);
+    font-size: 14px;
+    font-weight: normal;
+}
+.clear:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.t-center{
+    text-align: center;
+}
+.t-left{
+    text-align: left;
+}
+.mtop-15{
+    margin-top: 15px;
+}
+.mtop-30{
+    margin-top: 30px;
+}
+.mtop-60{
+    margin-top: 60px;
+}
+.mbott-15{
+    margin-bottom: 15px;
+}
+.mbott-30{
+    margin-bottom: 30px;
+}
+.mbott-60{
+    margin-bottom: 60px;
+}
+.pd-10{
+    padding: 10px;
+}
+.mr-10{
+    margin-right: 10px;
+}
+
+/* basic colors */
+/* main contrast */
+.orange{
+    background-color: #f15025;
+}
+.j-green{
+    background-color: #092327;
+}
+.orange-text{
+    color: #f15025;
+}
+.black{
+    background-color: #191919;
+}
+.black-text{
+    color: #191919;
+}
+/* area shades */
+.white{
+    background-color: #eef0f2;
+}
+.white-text{
+    color: #eef0f2;
+}
+.light-grey{
+    background-color: #ced0ce;
+}
+.dark-grey{
+    background-color: #c6c7c4;
+}
+
+/* forms */
+
+.form-sidebox{
+    width:18%;
+    height: 190px;
+    position: absolute;
+    left:auto;
+    background-color: #c6c7c4;
+    color: #191919;
+    margin-top: -210px;
+    margin-left: 32%;
+    border-radius: 6px;
+    padding: 5px;
+}
+.formfield{
+    text-align: left;
+    width: 70%;
+    padding: 15px;
+    background-color: #092327;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formfield-center{
+    text-align: center;
+    width: 70%;
+    padding: 15px;
+    background-color: #092327;
+    margin-left: auto;
+    margin-right: auto;
+    border-top:1px solid #f81e0a;
+}
+.formfield-buttons{
+    text-align: center;
+    width: 70%;
+    padding: 15px;
+    background-color: #092327;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formfield label{
+    display:block;
+    min-width: 110px;
+    text-align: left;
+    color: #c6c7c4;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.formfield input[type=text],.formfield input[type=email],.formfield input[type=password]{
+    border: none;
+    border-radius: 4px;
+    height: 26px;
+    padding-left: 5px;
+    background-color: #c6c7c4;
+    font-size: 16px;
+    font-weight: bold;
+}
+.formfield input[type=file]{
+    background-color: #c6c7c4;
+    color: #191919;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.formfield select{
+    background-color: #c6c7c4;
+    font-size: 16px;
+    font-weight: bold;
+    height: 26px;
+}
+.formfield textarea{
+    width: 90%;
+    resize: none;
+    background-color: #c6c7c4;
+    padding: 4px;
+}
+.formfield-center p{
+    font-weight: bold;
+    padding:10px;
+}
+.form-button{
+    min-width: 120px;
+    height:28px;
+    background-color: #f15025;
+    color: #191919;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.link-button{
+    display:inline-block;
+    text-align: center;
+    line-height: 28px;
+    min-width: 120px;
+    height:28px;
+    background-color: #f15025;
+    color: #191919;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+.form-button:hover,.link-button:hover{
+    background-color: #1f7986;
+    box-shadow: 2px 2px 4px #000000;
+    color: #c6c7c4;
+}
+input[type=text].error,input[type=email].error,input[type=password].error,textarea.error{
+    color:#f81e0a;
+    border:2px solid #f81e0a;
+}
+input[type=text].success{
+    background: #d1f7b8;
+    border:1px solid #26f80a;
+}

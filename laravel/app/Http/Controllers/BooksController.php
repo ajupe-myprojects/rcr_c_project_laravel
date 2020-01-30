@@ -83,7 +83,7 @@ class BooksController extends Controller
     {
         $book = Books::findOrFail($id);
         $validatedData = $request->validated();
-        $validatedData['user_uid'] = 2;
+        $validatedData['user_id'] = 2;
 
         $book->fill($validatedData);
         $book->save();
