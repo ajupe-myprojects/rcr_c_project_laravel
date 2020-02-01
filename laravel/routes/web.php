@@ -16,3 +16,5 @@ Route::get('/', 'HomeController@home')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
 Route::resource('/books', 'BooksController');
+
+Auth::routes();

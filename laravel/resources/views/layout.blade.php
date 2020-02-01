@@ -18,6 +18,15 @@
                 <li> <a href="{{route('contact')}}">Contact</a></li>
                 <li> <a href="{{route('books.index')}}">Book List</a></li>
                 <li> <a href="{{route('books.create')}}">Add Book</a></li>
+                @guest
+                    <li><a href=" {{ route('register') }} ">Register</a></li>
+                    <li><a href=" {{ route('login') }} ">Login</a></li>
+                @else
+                    <li><a href=" {{ route('logout') }} " onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a></li>
+                    <form action="{{ route('logout') }} " method="post" id="logout-form" style="display:none;">
+                        @csrf
+                    </form>
+                @endguest
             </ul>
             </div>
         </nav>
